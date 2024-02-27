@@ -1,12 +1,17 @@
 import React from "react";
-import UseMemo from "../component/Hooks/EuseMemo";
+// import CricketStadium from "../component/Seat-Arrangement/seat";
+import Seat1  from "../component/Seat-Arrangement/seat1";
+// import UseMemo from "../component/Hooks/EuseMemo";
+// import Basic from "../component/Formik/Basic";
 function Home() {
   return (
     <div>
       <div className="">
-       <UseMemo/>
+       {/* <UseMemo/> */}
+       {/* <Basic/> */}
+       {/* <CricketStadium/> */}
+       <Seat1 squareCount = {500}/>
       </div>
-      
     </div>
   );
 }

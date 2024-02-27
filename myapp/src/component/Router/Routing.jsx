@@ -26,6 +26,7 @@ import GroupingData from "../Tanstack Query/GroupingData";
 import Pokemon from "../../Redux/displayRedux/pokemon";
 import TodoList from "../../Redux/displayRedux/TodoList";
 import { SignUp } from "../../Pages/SignUp";
+import Basic from "../Formik/Basic";
 
 
 function Routing() {
@@ -61,6 +62,8 @@ function Routing() {
           <Route path="/useMemo"     element={<EuseMemo />} />
           <Route path="/useReducer"  element={<FuseReducer />} />
           <Route path="/useCallback" element={<GuseCallback />} />
+          {/* Material UI and Formik  */}
+          <Route path="/basic"        element={<Basic />} />
           {/* React-FinalForm and React-Select */}
           <Route path="/form"        element={<Forms />} />
           <Route path="/wizard"      element={<Wizard />} />

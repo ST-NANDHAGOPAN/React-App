@@ -442,3 +442,25 @@ th, td {
   margin: 0;
 }
 
+/* Basic Formic */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-container form {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.error{
+  color: red;
+}
