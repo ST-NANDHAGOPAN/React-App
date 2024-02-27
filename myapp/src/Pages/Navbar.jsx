@@ -3,7 +3,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 const NavBar = React.memo(() => {
   const navigate = useNavigate()
-  console.log("RENDERED");
   const handleLogout = () => {
     // Clear authentication token from local storage
     localStorage.removeItem("token");
@@ -157,16 +156,60 @@ const NavBar = React.memo(() => {
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link " to="/form">
-                  Forms
+                <NavLink
+                  className="nav-link "
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  to="/ff"
+                >
+                  Formik
                 </NavLink>
+                <ul
+                  className="dropdown-menu bg-info"
+                  aria-labelledby="navbarScrollingDropdown"
+                >
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold "
+                      to="/basic"
+                    > Basic
+                    </NavLink>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/wizard">
-                  Wizard
+                <NavLink
+                  className="nav-link "
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  to="/ff"
+                >
+               Final
                 </NavLink>
+                <ul
+                  className="dropdown-menu bg-info"
+                  aria-labelledby="navbarScrollingDropdown"
+                >
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold "
+                      to="/form"
+                    >  Forms
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold "
+                      to="/wizard"
+                    >  Wizard
+                    </NavLink>
+                  </li>
+                </ul>
               </li>
-
               <li className="nav-item">
               <NavLink
                   className="nav-link "

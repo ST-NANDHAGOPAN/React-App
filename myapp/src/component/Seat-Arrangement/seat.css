@@ -1,0 +1,49 @@
+
+/* ------------------------------------------------------------------------------------------------SeatingChart------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+  .circle-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.circle-1 {
+    background-color: #FFC0CB;
+    width: 600px;
+    height: 600px;
+    
+}
+
+.circle-2 {
+    background-color: #ADD8E6;
+    width: 250px;
+    height: 250px;
+    top: 175px;
+    left: 175px;
+}
+
+.circle-3 {
+    background-color: #90EE90;
+    width: 200px;
+    height: 200px;
+    top: 200px;
+    left:200px;
+}
+
+.seat {
+    position: absolute;
+    background-color: #FFA500;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+}
