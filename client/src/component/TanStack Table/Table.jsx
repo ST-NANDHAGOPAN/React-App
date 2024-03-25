@@ -226,16 +226,16 @@ function Table() {
             </thead>
             <tbody>
               {table.getRowModel().rows.map((row) => (
-                <tr key={row.id}>
+                <tr key={row.id} >
                   {row.getVisibleCells().map((cell) => (
-                    <td key={cell.id}>
+                    <td key={cell.id} className="text-center">
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
                       )}
                     </td>
                   ))}
-                  <td>
+                  <td  className="text-center">
                     <button
                       className="btn btn-sm btn-primary"
                       onClick={() => openEditModal(row.original)}
@@ -382,7 +382,7 @@ function Table() {
 }
 
 const Columns = [
-  {
+{
     header: "Id",
     accessorKey: "id",
   },
@@ -398,6 +398,6 @@ const Columns = [
     header: "Phone",
     accessorKey: "phone",
   },
-];
+  ];
 
 export default Table;
