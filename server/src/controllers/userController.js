@@ -3,9 +3,9 @@ const UserModel = require('../models/userModel');
 exports.getAllUsers = async (req, res) => {
   try {
     const data = await UserModel.find();
-    res.send({ data: data, message: "Data GET Success" });
+    res.json({ data: data, message: "Data GET Success" });
   } catch (error) {
-    res.status(500).send({ message: "Internal error: " + error });
+    res.status(500).json({ message: "Internal error: " + error });
   }
 };
 
@@ -13,9 +13,9 @@ exports.getUserById = async (req, res) => {
   try {
     const id = req.params.id;
     const data = await UserModel.findById(id);
-    res.send({ data: data, message: "Unique Data GET Success" });
+    res.json({ data: data, message: "Unique Data GET Success" });
   } catch (error) {
-    res.status(500).send({ message: "Internal error: " + error });
+    res.status(500).json({ message: "Internal error: " + error });
   }
 };
 
@@ -33,7 +33,7 @@ exports.createUser = async (req, res) => {
       receivedData: postData,
       message: "Data Received Successfully",
     };
-    res.send(responseData);
+    res.json(responseData);
   } catch (error) {
     res.status(500).send({ message: "Internal error: " + error });
   }
@@ -49,15 +49,15 @@ exports.updateUserById = async (req, res) => {
       { new: true }
     );
     if (!putData) {
-      return res.status(404).send({ message: "Data not found" });
+      return res.status(404).json({ message: "Data not found" });
     }
     const responseData = {
       receivedData: putData,
       message: "Data Updated Successfully",
     };
-    res.status(200).send(responseData);
+    res.status(200).json(responseData);
   } catch (error) {
-    res.status(500).send({ message: "Internal error: " + error });
+    res.status(500).json({ message: "Internal error: " + error });
   }
 };
 
@@ -66,11 +66,11 @@ exports.deleteUserById = async (req, res) => {
     const id = req.params.id;
     const deleteData = await UserModel.findByIdAndDelete(id);
     if (!deleteData) {
-      return res.status(404).send({ message: "Data not found" });
+      return res.status(404).json({ message: "Data not found" });
     }
     const responseData = { message: "Data Deleted Successfully" };
-    res.send(responseData);
+    res.json(responseData);
   } catch (error) {
-    res.status(500).send({ message: "Internal error: " + error });
+    res.status(500).json({ message: "Internal error: " + error });
   }
 };

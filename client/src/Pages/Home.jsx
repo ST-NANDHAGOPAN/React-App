@@ -1,11 +1,11 @@
 import React from "react";
-import Table from "../component/TanStack Table/Table";
+import CrudForm from "../component/CRUD/Crud";
 
 function Home() {
   return (
     <div>
       <div className="">
-      <Table/>
+      <CrudForm/>
       </div>
     </div>
   );

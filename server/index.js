@@ -16,8 +16,6 @@ app.use(bodyparser.json());
 
 // To connect to MongoDB
 mongoose.connect(process.env.DB_HOST, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
   dbName: process.env.DB_NAME,
 });
 
