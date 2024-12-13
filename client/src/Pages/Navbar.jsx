@@ -326,6 +326,15 @@ const NavBar = React.memo(() => {
                       GroupingData
                     </NavLink>
                   </li>
+                  
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold"
+                      to="/infinite-scroll"
+                    >
+                      Infinite-Scroll
+                    </NavLink>
+                  </li>
                 </ul>
               </li>
             </ul>

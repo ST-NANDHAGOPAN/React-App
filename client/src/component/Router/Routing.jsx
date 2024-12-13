@@ -27,6 +27,7 @@ import Pokemon from "../../Redux/displayRedux/pokemon";
 import TodoList from "../../Redux/displayRedux/TodoList";
 import { SignUp } from "../../Pages/SignUp";
 import Basic from "../Formik/Basic";
+import InfiniteScroll from "../Tanstack Query/InfiniteScroll";
 
 
 function Routing() {
@@ -73,6 +74,7 @@ function Routing() {
           <Route path="/virtualize"       element={<Virtualize />} />
           <Route path="/query"       element={<Query />} />
           <Route path="/groupingdata"       element={<GroupingData />} />
+          <Route path="/infinite-scroll"       element={<InfiniteScroll />} />
          
           {/* Redux */}
           <Route path="/redux"       element={<Counter />} />
